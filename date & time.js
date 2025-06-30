@@ -2,28 +2,32 @@
  
 // Q1
 
-function date(){
-let y = new Date("june 30 , 2025 9:17:30");
-y.setDate(y.getDate() + 20);
-console.log(y);
+function addDaysToDate(inputDate, daysToAdd) {
+    let y = new Date(inputDate);
+    y.setDate(y.getDate() + daysToAdd);
+    console.log(y.toLocaleString()); 
 }
-date();
+
+addDaysToDate("June 30, 2025 09:17:30", 20);
+
 
 // Q2.
 
-function time(){
-let y = new Date("june 30 , 2025 9:17:30");
-y.setDate(y.getDate() - 20);
-console.log(y);
+function subtractDaysFromDate(inputDate, daysToSubtract) {
+    let y = new Date(inputDate);                    
+    y.setDate(y.getDate() - daysToSubtract);         
+    console.log(y.toLocaleString());                 
 }
-time();
+
+subtractDaysFromDate("June 30, 2025 09:17:30", 15);
+
 
 // Q3.   calculate your birthday year
 
 let y = new Date();
 let myBirthyear = 2001;
 let calculateyears = y.getFullYear() - myBirthyear;
-console.log(calculateyears);
+console.log("my age is :" + calculateyears);
 
 // Q4.
 
